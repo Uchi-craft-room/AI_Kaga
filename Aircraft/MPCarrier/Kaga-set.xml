@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!--
+  Kaga -set file for FlightGear.
+ writen by Hitoshi uchida
+
+ base programu by
+  Copyright (C) 2007 - 2010  Anders Gidenstam  (anders(at)gidenstam.org)
+  This file is released under the GPL license version 2 or later.
+-->
+<PropertyList include="common.xml">
+
+	<sim include="Systems/kaga-views.xml">
+
+		<description>Multiplayer Kaga - Other pilots can land on it.</description>
+		<author>Hitoshi Uchida</author>
+		<status>alfa</status>
+		<aircraft-version>1.0</aircraft-version>
+
+		<flight-model>null</flight-model>
+
+		<presets>
+			<onground>true</onground>
+		</presets>
+
+		<startup>
+			<splash-texture>Aircraft/MPCarrier/kaga-splash.png</splash-texture>
+		</startup>
+
+		<sound>
+			<audible>false</audible>
+			<path/>
+		</sound>
+
+		<model>
+			<path>Aircraft/MPCarrier/Models/mp-kaga.xml</path>
+		</model>
+
+		<systems>
+
+			<electrical>
+				<path/>
+			</electrical>
+
+			<static>
+			</static>
+
+		</systems>
+
+		<instrumentation>
+			<path/>
+		</instrumentation>
+
+		<hud>
+			<path n="1">Aircraft/MPCarrier/Systems/LSO.xml</path>
+			<visibility n="1">true</visibility>
+			<font>
+				<size type="float">10.0</size>
+			</font>
+		</hud>
+
+		<!-- This aircraft is pointless without the kaga_demo scenario. -->
+		<ai>
+			<enabled type="bool">true</enabled>
+			<scenario n="100">kaga_demo</scenario>
+		</ai>
+
+		<mp-carriers>
+			<kaga-callsign type="string"></kaga-callsign>
+		</mp-carriers>
+	</sim>
+
+	<controls>
+		<rudder-pos-deg type="float"> 0.0 </rudder-pos-deg>
+		<speed-kts type="float"> 0.0 </speed-kts>
+	</controls>
+
+	<surface-positions>
+		<!-- These will be (ab)used for transmitting rudder-deg and speed-kts. -->
+		<rudder-pos-norm type="float"> 0.0 </rudder-pos-norm>
+		<flap-pos-norm type="float"> 0.0 </flap-pos-norm>
+	</surface-positions>
+
+
+	<nasal>
+		<!-- Nasal Carrier View -->
+		<CarrierControl>
+			<file>Aircraft/MPCarrier/Systems/commander.nas</file>
+			<script>
+				var carrier_name = "Kaga";
+			</script>
+		</CarrierControl>
+		<approachview>
+			<file>Aircraft/MPCarrier/Systems/approachview.nas</file>
+		</approachview>
+		<lsoview>
+			<file>Aircraft/MPCarrier/Systems/lsoview.nas</file>
+		</lsoview>
+		<Radar>
+			<file>Aircraft/MPCarrier/Panels/MP-radar.nas</file>
+		</Radar>
+		<LSOComms>
+			<file>Aircraft/MPCarrier/Systems/lsocomms.nas</file>
+		</LSOComms>
+		<walkview>
+			<file>Aircraft/Generic/WalkView/walkview.nas</file>
+		</walkview>
+		<walkviews>
+			<file>Aircraft/MPCarrier/Systems/kaga-walk-views.nas</file>
+		</walkviews>
+	</nasal>
+
+</PropertyList>
