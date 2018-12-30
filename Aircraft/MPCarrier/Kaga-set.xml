@@ -13,8 +13,8 @@
 
 		<description>Multiplayer Kaga - Other pilots can land on it.</description>
 		<author>Hitoshi Uchida</author>
-		<status>alfa</status>
-		<aircraft-version>1.0</aircraft-version>
+		<status>1.2</status>
+		<aircraft-version>1.2</aircraft-version>
 
 		<flight-model>null</flight-model>
 
