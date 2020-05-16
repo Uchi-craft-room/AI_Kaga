@@ -12,9 +12,17 @@
 	<sim include="Systems/kaga-views.xml">
 
 		<description>Multiplayer Kaga - Other pilots can land on it.</description>
-		<author>Hitoshi Uchida</author>
-		<status>1.2</status>
+		<long-description>Ver.1.2</long-description>
+		<author>Hitoshi Uchida 'HiTouch'(3D/FDM)</author>
 		<aircraft-version>1.2</aircraft-version>
+
+		<previews>
+			<preview>
+				<type>exterior</type>
+				<splash type="bool">true</splash>
+				<path>Splash/Kaga-splash.png</path>
+			</preview>
+		</previews>
 
 		<flight-model>null</flight-model>
 

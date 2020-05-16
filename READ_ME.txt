@@ -1,6 +1,6 @@
 
 *********************************************************************
-AI kaga v1.2   by Hitoshi Uchida
+AI kaga v1.4   by HiTouch
 ************************************************************************
 ①AI艦船DDH-184ヘリコプター搭載護衛艦『かが』にて発着シナリオを実行することができます。
 ※Carrier Controlにてエレベータを上下することが出来ます。
@@ -23,13 +23,12 @@ AI-kaga/AIフォルダ内の
 【手順２】
 AI-kaga/Aircraft/MPCarrierフォルダ内の
    kaga-set.xml
-   kaga-splash.png
 
 ⇒　FlightGear *.*.*/data/Aircraft/MPCarrierの直下へ移動
 
 【手順３】
 AI-kaga/Aircraft/MPCarrier/Modelsフォルダ内の
-   mp-kaga.xml
+   Splashフォルダ及び mp-kaga.xml
 
 ⇒　FlightGear *.*.*/data/Aircraft/MPCarrier/Modelsの直下へ移動
 
